@@ -1,18 +1,4 @@
 <h1>add contact</h1>
 
-<%= form_for(@contact) do |form| %>
-  <div class="field form-group">
-    <%= form.text_field :name, placeholder: "Name", class: "form-control" %>
-  </div>
-  <div class="field form-group">
-    <%= form.text_field :number, placeholder: "Phone number", class: "form-control" %>
-  </div>
-  <div class="field form-group">
-    <%= form.email_field :email, placeholder: "Email", class: "form-control" %>
-  </div>
-
-  <div class= "actions">
-    <%= form.submit class: "btn btn-secondary" %>
-  </div>
-
-<% end %>
+<%= render 'form', contact: @contact %><br/>
+<%= link_to 'Back', contacts_path, class: "btn btn-dark" %>
