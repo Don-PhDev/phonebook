@@ -11,6 +11,9 @@ class ContactsController < ApplicationController
 
   def edit
   end
+
+  def show
+  end
   
   def update
     if  @contact.update(contact_params)

@@ -15,9 +15,10 @@
         <th><%= contact.name %> </th>
         <th><%= contact.number %> </th>
         <th><%= contact.email %> </th>
-        <th><%= link_to 'Edit', edit_contact_path(contact), class: "btn btn-secondary" %> </th>
+        <th><%= link_to 'Edit', edit_contact_path(contact), class: "btn btn-warning" %>
+        <%= link_to 'Show', contact_path(contact), class: "btn btn-primary" %> </th>
       </tr>
     <%end%>
   </tbody>
 </table>
-<%= link_to "Add Contact", new_contact_path, class: "btn btn-secondary" %>
+<%= link_to "Add Contact", new_contact_path, class: "btn btn-success" %>
