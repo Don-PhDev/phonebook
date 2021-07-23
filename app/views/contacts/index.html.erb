@@ -1,23 +1,22 @@
-<h1>List of contacts</h1>
+<h1>Contact list</h1>
 
-<table class="table table-hover">
-  <thead>
+<table class="table table-borderless table-hover">
+  <thead class="table-dark">
     <tr>
-      <th>Name </th>
-      <th>Phone Number </th>
-      <th>Email </th>
-      <th>Action </th>
+      <th><strong>Name</strong></th>
+      <th><strong>Phone Number</strong></th>
+      <th><strong>Email Address</strong></th>
     </tr>
   </thead>
   <tbody>
     <% @contacts.each do |contact| %>
       <tr>
-        <th><%= contact.name %> </th>
+        <th><%= link_to contact.name, contact_path(contact), class: 'link' %> </th>
         <th><%= contact.number %> </th>
         <th><%= contact.email %> </th>
-        <th>  <%= link_to 'Show', contact_path(contact), class: "btn btn-primary" %> </th>
       </tr>
     <%end%>
   </tbody>
 </table>
+<hr>
 <%= link_to "Add Contact", new_contact_path, class: "btn btn-success" %>

@@ -12,9 +12,6 @@ class ContactsController < ApplicationController
   def edit
   end
 
-  def show
-  end
-  
   def update
     if  @contact.update(contact_params)
       redirect_to contacts_path, notice: "Contact successfully updated!"
@@ -30,6 +27,12 @@ class ContactsController < ApplicationController
       redirect_to contacts_path, notice: "Contact successfully added!"
     else
       render :new
+    end
+  end
+
+  def destroy
+    if @contact.destroy
+      redirect_to contacts_path, notice: "Contact deleted!"
     end
   end
 

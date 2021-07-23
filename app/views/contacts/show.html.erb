@@ -1,8 +1,10 @@
 <div class="jumbotron">
   <h1 class="display-4"><%= @contact.name %></h1>
-  <p class="lead">Contact number: <%= @contact.number %></p>
-  <p class="lead">Email address: <%= @contact.email %></p>
+  <p class="lead">Contact number: <strong><%= @contact.number %></strong></p>
+  <p class="lead">Email address: <strong><%= @contact.email %></strong></p>
   <hr class="my-4"> 
   <%= link_to 'Back', contacts_path, class: "btn btn-dark" %>
   <%= link_to 'Edit', edit_contact_path, class: "btn btn-primary" %>
+  <%= link_to 'Delete', contact_path, method: :delete, data: {confirm: "Are you sure?"},  class: "btn btn-danger" %>
+
 </div>  
