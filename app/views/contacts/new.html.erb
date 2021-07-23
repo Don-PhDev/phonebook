@@ -1,0 +1,18 @@
+<h1>add contact</h1>
+
+<%= form_for(@contact) do |form| %>
+  <div class="field form-group">
+    <%= form.text_field :name, placeholder: "Name", class: "form-control" %>
+  </div>
+  <div class="field form-group">
+    <%= form.text_field :name, placeholder: "Phone number", class: "form-control" %>
+  </div>
+  <div class="field form-group">
+    <%= form.text_field :name, placeholder: "Email", class: "form-control" %>
+  </div>
+
+  <div class= "actions">
+    <%= form.submit class: "btn btn-secondary" %>
+  </div>
+
+<% end %>
